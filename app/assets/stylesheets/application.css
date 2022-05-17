@@ -1,0 +1,64 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ #section_cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 50px;
+ }
+
+ .card {
+     margin-top: 50px;
+ }
+
+ .card-body {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     box-shadow: 10px 5px 5px rgb(182, 182, 182);
+     border-radius: 0px 0px 50px 0px;
+     border: 0px;
+ }
+
+ .card-body p {
+     font-size: 12px;
+     margin-top: 5px;
+ }
+
+ .card-body a {
+     font-size: 17px;
+ }
+
+ #home_title {
+     padding-top: 100px;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+
+ #view_all {
+     font-size: 25px;
+     margin-top: 25px;
+ }
+
+#jumbotron {
+    height: 400px;
+    background-color: rgb(255, 171, 103);
+}
+
+.lien_read {
+    color: rgb(255, 171, 103);
+}

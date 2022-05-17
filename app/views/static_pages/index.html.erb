@@ -1,0 +1,21 @@
+<div id="jumbotron" class="p-5 text-white rounded">
+        <h1 id="home_title" class="text-center"> Hello stranger ! Welcome to The Gossip Project </h1>
+    <h2 class="text-center"> You can create an event <a href="new_event_path">here</a></h2>
+   
+</div>
+
+<h3 id="view_all" class="text-center"> View All Events :</h3>
+
+<div id="section_cards">
+    <% @events.each do |event| %>
+        <div id="section_cards">
+            <div class="card border-0" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title"><%= event.title %></h5>
+                    <a class="lien_read" href="show_event_path %>">Show details</a>
+                    
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>
