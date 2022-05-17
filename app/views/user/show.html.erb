@@ -1,0 +1,15 @@
+<h1><%= current_user.first_name %>! Welcome to your private page</h1>
+<h3> Your personnal infos :</h3>
+<div class="d-flex justify-content-center">
+    <div class="card border-0 mb-5" style="width: 18rem;">
+        <%= image_tag("dan.jpg", :alt => "picture of Dan Humpfrey", :class => "style_img") %>
+        <div class="card-body">
+            <h5 class="card-title"><%= current_user.first_name %> <%= current_user.last_name %></h5>
+            <p class="card-text">About me : <%= current_user.description %></p>
+            <p class="card-text">Email adress : <%= current_user.email %></p>
+            <p class="card-text">City : <%= city_path(@author.city.id)%>"><%= @author.city.city_name %></a></p>
+         </div>
+    </div>
+</div>
+
+<h3> Here you can view all of your created events </h3>
