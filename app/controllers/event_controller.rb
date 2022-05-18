@@ -5,7 +5,7 @@ class EventController < ApplicationController
     end
 
     def show
-        @event = event.find(params[:id])
+        @event = Event.find(params[:id])
     end
 
     def new
@@ -13,14 +13,15 @@ class EventController < ApplicationController
     end
 
     def create
-        @event_new = Event.new(user: current_user, start_date: params[:start_date], duration: params[:duration], title: params[:title], description: params[:description], price: params[:price], location: params[:location], admin_id: current_user.id)
+        @event_new = Event.new(start_date: params[:start_date], duration: params[:duration], title: params[:title], description: params[:description], price: params[:price], location: params[:location], admin_id: current_user.id)
 
-        if event.save
-            redirect_to event_path(@event.id)
+        if @event_new.save
+            redirect_to event_path(@event_new.id)
         else
             render :new
         end
     end
+
 end
 
 

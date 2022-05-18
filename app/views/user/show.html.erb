@@ -12,3 +12,17 @@
 </div>
 
 <h3> Here you can view all of your created events </h3>
+
+<div id="section_cards">
+    <% @current_user.events.each do |event| %>
+        <div id="section_cards">
+            <div class="card border-0" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title"><%= event.title %></h5>
+                    <a class="lien_read" href="event_path(:id)">Show details</a>
+                    
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>

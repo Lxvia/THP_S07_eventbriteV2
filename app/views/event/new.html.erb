@@ -12,10 +12,10 @@
     <%= text_field_tag 'price' ,"", class:"form-control", placeholder: "Prix" %><br/>
     <%= submit_tag "Créer", class: 'btn btn-secondary float-right' %>
   <% end %>
-  <% if @event.errors.any? %>
+  <% if @event_new.errors.any? %>
     <div class="alert alert-danger" role="alert">
       <ul>
-        <% @event.errors.full_messages.each do |message| %>
+        <% @event_new.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
