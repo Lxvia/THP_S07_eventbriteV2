@@ -1,0 +1,29 @@
+
+<div style="margin-left:30%; margin-right:30%;">
+
+  <h2> Edit event</h2><hr><br/>
+
+  <%=form_tag url_for(action: 'update'), method: 'patch' do %> 
+    <%= text_field_tag 'title', @event.title , class:"form-control" %><br/>
+      <%= text_field_tag 'location' , @event.location , class:"form-control" %><br/>
+      <%= datetime_field_tag 'start_date' , @event.start_date , class:"form-control" %><br/>
+      <%= text_area_tag 'description' , @event.description , class:"form-control" %><br/>
+      <%= text_field_tag 'duration' , @event.duration , class:"form-control" %><br/>
+      <%= text_field_tag 'price' , @event.price , class:"form-control" %><br/>
+      <div class="d-flex flex-row">
+        <%= submit_tag "Edit", class: 'btn btn-secondary float-right', style: 'margin-right: 1em' %>
+        <%= button_to "Delete event", @event, method: :delete, data:{confirm: "Are you sure you want to delete your event?"}, class:"btn btn-danger float-right" %><br/>
+      <div>
+  <% end %>
+  <% if @event.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <ul>
+        <% @event.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+</div>

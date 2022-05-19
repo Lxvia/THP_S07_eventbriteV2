@@ -9,7 +9,7 @@ class Event < ApplicationRecord
     validate :duration_must_be_positive
     validate :price_must_be_between_1_1000
 
-    has_many :attendances
+    has_many :attendances, dependent: :delete_all
     has_many :users, through: :attendance
     belongs_to :admin, class_name: 'User' 
     
