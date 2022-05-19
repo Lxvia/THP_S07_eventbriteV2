@@ -1,4 +1,10 @@
 class AttendancesController < ApplicationController
+
+  def show 
+    @event = Event.find(params[:event_id])
+    @attendance = Attendance.all
+  end
+
   def new
     @attendance = Attendance.create
     @event = Event.find(params[:event_id])

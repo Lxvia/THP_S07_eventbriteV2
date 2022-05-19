@@ -1,0 +1,7 @@
+<h1 class="text-center"> All participants to the event : <%= @event.title %> </h1>
+
+<% @attendance.each do |attendance| %>
+    <% if attendance.event_id == @event.id %>
+        <h4 class="text-center"><%= attendance.user.first_name %></h4>
+    <% end %>
+<% end %>

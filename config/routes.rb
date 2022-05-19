@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :event
 
   resources :event do
-    resources :attendances, only: [:new, :create]
+    resources :attendances
   end
   
 end
