@@ -2,3 +2,4 @@
 <p class="text-center pt-2"> <%= @event.description %> <p>
 <p class="text-center"> Event location : <%= @event.location %></a> <p>
 <p class="text-center"> Event admin : <%= @event.admin.first_name %></a> <p>
+<p class="text-decoration-none text-center"><%= link_to "Register",  new_event_attendance_path(@event.id), class: "btn btn-danger" %></p>

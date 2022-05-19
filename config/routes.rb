@@ -6,4 +6,9 @@ Rails.application.routes.draw do
   get '/index/:first_name', to: 'static_pages#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :event
+
+  resources :event do
+    resources :attendances, only: [:new, :create]
+  end
+  
 end
