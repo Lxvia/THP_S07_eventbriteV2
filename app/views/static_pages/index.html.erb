@@ -15,7 +15,7 @@
             <div class="card border-0" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title"><%= event.title %></h5>
-                    <a class="lien_read" href="event_path(:id)">Show details</a>
+                    <a><%=link_to "Show details", event_path(event.id), :class => "lien_read" %></a>
                     
                 </div>
             </div>
