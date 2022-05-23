@@ -1,28 +1,7 @@
-<h1><%= current_user.first_name %>! Welcome to your private page</h1>
-<h3> Your personnal infos :</h3>
-<div class="d-flex justify-content-center">
-    <div class="card border-0 mb-5" style="width: 18rem;">
-        <%= image_tag("dan.jpg", :alt => "picture of Dan Humpfrey", :class => "style_img") %>
-        <div class="card-body">
-            <h5 class="card-title"><%= current_user.first_name %> <%= current_user.last_name %></h5>
-            <p class="card-text">About me : <%= current_user.description %></p>
-            <p class="card-text">Email adress : <%= current_user.email %></p>
-         </div>
-    </div>
-</div>
-
-<h3> Here you can view all of your created events </h3>
-
-<div id="section_cards">
-    <% @current_user.events.each do |event| %>
-        <div id="section_cards">
-            <div class="card border-0" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title"><%= event.title %></h5>
-                    <a class="lien_read" href="event_path(:id)">Show details</a>
-                    
-                </div>
-            </div>
-        </div>
-    <% end %>
-</div>
+<p><%= @user.first_name %>, here you can add a profile pic.</p>
+<h3>Your current pp :</h3>
+<%if @user.avatar.attached?%>
+  <%= image_tag @user.avatar, alt: 'avatar' %>
+<%else%>
+  <p>=== You did not upload a pic yet ===</p>
+<%end%>

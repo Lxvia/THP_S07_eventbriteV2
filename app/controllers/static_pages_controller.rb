@@ -7,5 +7,10 @@ class StaticPagesController < ApplicationController
   end
 
   def secret
+    @user = current_user
+  end
+
+  def avatar
+    @user = current_user
   end
 end

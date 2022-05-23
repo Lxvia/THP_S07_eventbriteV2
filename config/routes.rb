@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'static_pages/index'
   get 'static_pages/secret'
+  get 'static_pages/avatar'
   devise_for :users
   root to: 'static_pages#index'
   get '/index/:first_name', to: 'static_pages#index'
